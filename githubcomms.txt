@@ -1,0 +1,2 @@
+git fetch origin            #retrive from remote repository
+git merge origin/main       #merge remote with local

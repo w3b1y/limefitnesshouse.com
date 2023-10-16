@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Oswald:wght@300;700&family=Red+Hat+Display:wght@400;700;900&display=swap');
+
+/*==================== VARIABLES CSS ====================*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  --first-color: hsl(79, 72%, 55%);
+  --first-color-light: hsl(79, 97%, 77%);
+  --first-color-alt: hsl(79, 67%, 52%);
+  --first-color-dark: hsl(79, 63%, 50%);
+  --first-color-gray: hsl(79, 6%, 64%);
+  --title-color: hsl(180, 4%, 98%);
+  --title-color-black: hsl(180, 4%, 12%);
+  --text-color: hsl(180, 4%, 72%);
+  --text-color-light: hsl(180, 4%, 65%);
+  --body-color: hsl(180, 12%, 8%);
+
+  /*========== Font ==========*/
+  --body-font: 'Red Hat Display', sans-serif;
+  --second-font: 'Kushan Script', cursive;
+  --xxl-font-size: 2rem;
+  --xl-font-size: 1.5rem;
+  --l-font-size: 1.25rem;
+  --m-font-size: .938rem;
+  --s-font-size: .813rem;
+  --xs-font-size: .75rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --font-bold: 700;
+  --font-black: 900;
+
+  /*========== z-index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+
+@media screen and (min-width: 1024px) {
+  :root {
+    --xxl-font-size: 6rem;
+    --xl-font-size: 3.5rem;
+    --l-font-size: 2.75rem;
+    --m-font-size: 1rem;
+    --s-font-size: .875rem;
+    --xs-font-size: .813rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+button,
+input {
+  font-family: var(--body-font);
+  font-size: var(--m-font-size);
+}
+
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--title-color);
+  font-weight: var(--font-bold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/*==================== REUSABLE CSS CLASSES ====================*/
+.container {
+  max-width: 1124px;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+section {
+  padding: 4.5rem 0 2rem;
+}
+
+.section__data {
+  display: flex;
+  flex-direction: column;
+  row-gap: .75rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section__title,
+.section__title-border {
+  font-size: var(--big-font-size);
+  letter-spacing: 1.5px;
+}
+
+.section__subtitle {
+  font-size: var(--h2-font-size);
+  font-family: var(--second-font);
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  color: var(--first-color);
+  transform: rotate(-2deg);
+}
+
+.section__title {
+  display: flex;
+  column-gap: .75rem;
+  justify-content: center;
+}
+
+.section__title-border {
+  -webkit-text-stroke: 1px var(--text-color);
+  color: transparent;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.main {
+  overflow: hidden;
+}
+
+
+/*==================== HEADER ====================*/
+#header {
+  width: 100%;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  transition: background .3s;
+}
+
+nav {
+  display: flex;
+  height: var(--header-height);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo,
+.nav__toggle {
+  display: flex;
+  color: var(--title-color);
+}
+
+.nav__logo {
+  align-items: center;
+  column-gap: .5rem;
+  font-weight: var(--font-bold);
+}
+
+.nav__logo img {
+  width: 1.25rem;
+}
+
+.nav__toggle {
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.nav__list {
+  padding: 5rem 0 0 3rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.5rem;
+}
+
+.nav__link {
+  color: var(--title-color);
+  transition: color .3s;
+}
+
+.nav__link:hover {
+  color: var(--first-color);
+}
+
+.nav__close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  color: var(--title-color);
+  cursor: pointer;
+}
+
+.show-menu {
+  right: 0 !important;
+}
+
+
+/*==================== MAIN ====================*/
+.home {
+  position: relative;
+  padding-bottom: 0;
+}
+
+.home__container {
+  padding-top: 4rem;
+  row-gap: .3rem;
+  text-align: center;
+}
+
+.home__title {
+  margin: .5rem 0;
+  font-size: var(--xxl-font-size);
+  font-weight: var(--font-black);
+  letter-spacing: 1.5px;
+}
+.home__title span {
+  white-space: nowrap;
+}
+.home__title .secondary {
+  font-size: var(--xl-font-size);
+  -webkit-text-stroke: 1px var(--title-color);
+  color: transparent;
+}
+
+.home__description {
+  margin-bottom: 2.5rem;
+}
+
+.button {
+  display: inline-block;
+  width: fit-content;
+  margin: auto;
+  padding: 18px 32px;
+  background-color: var(--first-color);
+  border: 2px solid var(--first-color-light);
+  font-weight: var(--font-bold);
+  cursor: pointer;
+  transition: background .3s;
+}
+.button:hover {
+  background-color: var(--first-color-alt);
+}
+
+.button i {
+  font-size: 1.25rem;
+  transition: transform .3s;
+}
+.button__flex {
+  display: inline-flex;
+  margin-bottom: 3rem;
+  align-items: center;
+  justify-content: center;
+  column-gap: .5rem;
+  color: var(--title-color-black);
+}
+.button__flex:hover i {
+  transform: translateX(.25rem);
+}
+
+.triangle,
+.triangle::before,
+.triangle::after {
+  display: block;
+  position: absolute;
+  right: 0;
+  width: 305px;
+  height: 300px;
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
+}
+
+.triangle {
+  bottom: 0;
+  background-color: var(--first-color);
+}
+
+.triangle::before,
+.triangle::after {
+  content: '';
+  width: 205px;
+  background-color: var(--first-color-alt);
+  top: 0;
+}
+
+.triangle::after {
+  width: 105px;
+  background-color: var(--first-color-dark);
+}
+
+.home__image {
+  display: block;
+  position: relative;
+  width: 370px;
+  margin: 0 auto;
+  z-index: var(--z-tooltip);
+}
+
+@media screen and (width < 1024px) {
+  .nav__menu {
+    position: fixed;
+    background-color: hsla(180, 12%, 8%, .8);
+    backdrop-filter: blur(32px);
+    -webkit-backdrop-filter: blur(32px);
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    transition: right .3s;
+  }
+}

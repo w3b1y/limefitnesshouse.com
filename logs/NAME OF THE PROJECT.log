@@ -1,0 +1,10 @@
+2023-09-24 22:11:45,215 INFO: NAME OF THE PROJECT startup [in C:\Users\fabbr\base\app\__init__.py:45]
+<<<<<<< HEAD
+2023-09-25 18:30:50,706 INFO: NAME OF THE PROJECT startup [in C:\Users\fabbr\base\app\__init__.py:45]
+2023-09-25 18:31:35,952 INFO: NAME OF THE PROJECT startup [in C:\Users\fabbr\base\app\__init__.py:45]
+=======
+2023-09-25 18:18:12,295 INFO: NAME OF THE PROJECT startup [in C:\Users\marco\OneDrive\Desktop\websites\base\app\__init__.py:45]
+2023-09-25 18:30:54,797 INFO: NAME OF THE PROJECT startup [in C:\Users\marco\OneDrive\Desktop\websites\base\app\__init__.py:45]
+2023-09-25 18:31:05,175 INFO: NAME OF THE PROJECT startup [in C:\Users\marco\OneDrive\Desktop\websites\base\app\__init__.py:45]
+2023-09-25 18:32:37,117 INFO: NAME OF THE PROJECT startup [in C:\Users\marco\OneDrive\Desktop\websites\base\app\__init__.py:45]
+>>>>>>> 16dc06c71c8cf361ab93b291947c4f99b0118e5f

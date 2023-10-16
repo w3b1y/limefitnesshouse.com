@@ -1,0 +1,6 @@
+wheel
+flask
+python-dotenv
+sqlalchemy
+flask-migrate
+flask-sqlalchemy
