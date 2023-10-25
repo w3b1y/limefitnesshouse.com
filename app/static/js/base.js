@@ -1,7 +1,7 @@
 const navMenu = document.querySelector('.nav__menu'),
       navToggle = document.querySelector('.nav__toggle'),
       navClose = document.querySelector('.nav__close'),
-      navLink = document.querySelectorAll('.nav__link');
+      navLink = document.querySelectorAll('.nav__item');
 
 if (navToggle) {
   navToggle.addEventListener('click', () => {
