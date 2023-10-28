@@ -36,25 +36,11 @@
   --z-fixed: 100;
 }
 
-
-@media screen and (min-width: 1024px) {
-  :root {
-    --xxl-font-size: 6rem;
-    --xl-font-size: 3.5rem;
-    --l-font-size: 2.75rem;
-    --m-font-size: 1rem;
-    --s-font-size: .875rem;
-    --xs-font-size: .813rem;
-    --h1-font-size: 2.25rem;
-    --h2-font-size: 1.5rem;
-    --h3-font-size: 1.25rem;
-  }
-}
-
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  scroll-margin-top: 30px;
 }
 
 html {
@@ -97,7 +83,6 @@ img {
 
 /*==================== REUSABLE CSS CLASSES ====================*/
 .container {
-  max-width: 1124px;
   padding-right: 1.5rem;
   padding-left: 1.5rem;
 }
@@ -194,6 +179,9 @@ nav {
   column-gap: .5rem;
   font-weight: var(--font-bold);
 }
+.nav__logo span {
+  display: none;
+}
 
 .nav__logo img {
   width: 5.25rem;
@@ -254,6 +242,7 @@ nav {
   letter-spacing: 1.5px;
 }
 .home__title span,
+.home__description span,
 .program__title span,
 .maps span {
   white-space: nowrap;
@@ -269,9 +258,6 @@ nav {
 .home__description {
   margin-bottom: 2.5rem;
   font-size: var(--l-font-size);
-}
-.home__description span {
-  white-space: nowrap;
 }
 
 .button {
@@ -345,7 +331,7 @@ nav {
 
 /*==================== PROGRAM ====================*/
 .program.container {
-  grid-template-columns: 225px;
+  grid-template-columns: 250px;
   justify-content: center;
   row-gap: 2rem;
 }
@@ -489,7 +475,8 @@ h3.maps__title {
 
 
 /*==================== PRICING ====================*/
-.pricing.container {
+.pricing .grid {
+  margin-top: 2rem;
   grid-template-columns: 285px;
   justify-content: center;
   row-gap: 2rem;
@@ -702,7 +689,259 @@ iframe {
 
 
 
-@media screen and (width < 1024px) {
+@media (max-width: 340px) {
+  /*==================== REUSABLE CSS CLASSES ====================*/
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /*==================== NAVBAR ====================*/
+  nav {
+    width: calc(100% - 2rem);
+  }
+
+
+  /*==================== HOME ====================*/
+  .itriangle,
+  .itriangle::before,
+  .itriangle::after,
+  .triangle,
+  .triangle::before,
+  .triangle::after {
+    height: 255px;
+    width: calc(100% - 2rem);
+  }
+
+  .home__title span,
+  .home__description span,
+  .program__title span,
+  .maps span {
+    white-space: normal;
+  }
+
+
+  /*==================== PROGRAM ====================*/
+  .program__title,
+  .program__title .secondary, 
+  .maps__title,
+  .maps__title .secondary {
+    font-size: var(--l-font-size);
+  }
+
+
+  /*==================== PRICING ====================*/
+  .pricing .grid {
+    grid-template-columns: auto;
+  }
+
+  /*==================== FOOTER ====================*/
+  .footer__content {
+    grid-template-columns: repeat(1, minmax(5rem, 1fr));
+    gap: .5rem .75rem;
+  }
+
+  .footer__content div:first-child {
+    margin-bottom: 2rem;
+  }
+}
+
+
+@media (min-width: 768px) {
+  /*==================== HOME ====================*/
+  .home.container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+
+  /*==================== PROGRAM ====================*/
+  .program.container {
+    grid-template-columns: auto;
+  }
+
+  #power-up {
+    grid-template-columns: repeat(2, 250px);
+    gap: 2.5rem;
+  }
+
+
+  /*==================== TRAINER ====================*/
+  .trainer.container {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+
+
+  /*==================== PRICING ====================*/
+  .pricing .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+
+  /*==================== FOOTER ====================*/
+  .footer__content {
+    grid-template-columns: repeat(2, auto);
+    gap: .5rem .75rem;
+  }
+}
+
+
+@media (min-width: 1024px) {
+  :root {
+    --xxl-font-size: 6rem;
+    --xl-font-size: 3.5rem;
+    --l-font-size: 2.75rem;
+    --m-font-size: 1.5rem;
+    --s-font-size: .875rem;
+    --xs-font-size: .813rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+  }
+
+  .container {
+    padding-right: 4.5rem;
+    padding-left: 4.5rem;
+  }
+
+  .nav {
+    height: calc(var(--header-height) + 2rem);
+  }
+
+  .nav__menu {
+    height: 100%;
+  }
+  .nav__list {
+    height: 100%;
+    flex-direction: row;
+    padding: 0;
+    align-items: center;
+    column-gap: 4rem;
+  }
+  .nav__item {
+    display: flex;
+    height: 100%;
+    font-size: var(--s-font-size);
+    text-align: center;
+  }
+  .nav__item a {
+    margin: auto;
+  }
+
+  .nav__toggle,
+  .nav__close {
+    display: none;
+  }
+
+  .section {
+    padding: 7rem 0 0;
+  }
+
+
+  .home.container {
+    grid-template-columns: repeat(2, max-content);
+    overflow-x: hidden;
+    justify-content: space-around;
+
+  }
+  .home__title {
+    display: flex;
+    margin: .75rem 0 1.25rem;
+    flex-direction: column;
+  }
+  .home__title span {
+    text-align: start;
+  }
+  .home__description {
+    width: 445px;
+    margin-bottom: 3rem;
+    font-size: var(--m-font-size);
+  }
+  .home__description span {
+    display: block;
+    text-align: start;
+  }
+  .home__image {
+    width: 485px;
+  }
+  .button__flex {
+    display: block;
+    margin: auto auto auto 0;
+  }
+  .triangle,
+  .triangle::before,
+  .triangle::after {
+    height: 700px;
+    width: 600px;
+  }
+  .triangle::before {
+    width: 400px;
+  }
+  .triangle::after {
+    width: 200px;
+  }
+
+
+  .program.container {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+  #power-up {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.5rem;
+  }
+
+  .program__img {
+    width: 85px;
+    height: 85px;
+  }
+  .program__img img {
+    width: 50px;
+  }
+
+  .program__description {
+    font-size: var(--m-font-size);
+  }
+  .program__description.desktop {
+    display: none;
+  }
+
+
+
+  .trainer.container {
+    padding-left: 15rem;
+    padding-right: 15rem;
+  }
+  #laura::before,
+  #roberto::before,
+  #matteo::before,
+  #irene::before,
+  #elisa::before {
+    content: '';
+    display: grid;
+    place-items: center;
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    margin: 1rem 0;
+  }
+  .trainer__description {
+    font-size: var(--m-font-size);
+  }
+
+
+  .pricing__img {
+    font-size: var(--l-font-size);
+  }
+  .pricing__list li {
+    font-size: var(--m-font-size);
+  }
+}
+
+
+@media (width < 1024px) {
   .nav__menu {
     position: fixed;
     background-color: hsla(180, 12%, 8%, .8);
@@ -714,11 +953,6 @@ iframe {
     height: 100%;
     transition: right .3s;
   }
-
-  .nav__logo span {
-    display: none;
-  }
-
 
   .program__description.desktop {
     display: none;
