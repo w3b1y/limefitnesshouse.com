@@ -75,6 +75,10 @@ a {
   color: var(--text-color);
 }
 
+abbr {
+  text-decoration: none;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -243,7 +247,7 @@ nav {
 }
 .home__title span,
 .home__description span,
-.program__title span,
+.program.container:nth-child(1 of .program__title) span,
 .maps span {
   white-space: nowrap;
 }
@@ -331,7 +335,7 @@ nav {
 
 /*==================== PROGRAM ====================*/
 .program.container {
-  grid-template-columns: 250px;
+  grid-template-columns: repeat(1, auto);
   justify-content: center;
   row-gap: 2rem;
 }
@@ -352,36 +356,52 @@ h3.maps__title {
   border: 2px solid transparent;
   transition: background .5s, border .4s;
 }
-.program__card:hover {
-  background-color: var(--first-color);
-  border: 2px solid var(--first-color-light);
-}
 
-.program__img {
+.program__img::before {
+  content: '';
   display: grid;
   place-items: center;
   width: 50px;
   height: 50px;
   border-radius: 100%;
+  background-position: center;
+  background-size: 40px 40px;
+  background-repeat: no-repeat;
   background-color: var(--first-color-gray);
   margin-bottom: 1rem;
 }
 .program__img img {
   width: 38px;
 }
-.program__card:hover .program__img {
-  background-color: var(--first-color-light);
-}
-
-.program__card:hover .program__title,
-.program__card:hover .program__description {
-  color: var(--title-color-black);
-}
 
 .program__description {
   font-size: var(--l-font-size);
 }
 
+#power-pump .program__img::before {
+  background-image: url("/static/img/program1.png");
+}
+#walking .program__img::before {
+  background-image: url("/static/img/program2.png");
+}
+#spinning .program__img::before {
+  background-image: url("/static/img/program8.png");
+}
+#body-ton .program__img::before {
+  background-image: url("/static/img/program7.png");
+}
+#functional-training .program__img::before {
+  background-image: url("/static/img/program4.png");
+}
+#abdominal-killer .program__img::before {
+  background-image: url("/static/img/program6.png");
+}
+#pilates-gym .program__img::before {
+  background-image: url("/static/img/program3.png");
+}
+#groupboxing .program__img::before {
+  background-image: url("/static/img/program5.png");
+}
 
 /*==================== TRAINER ====================*/
 .trainer__card:nth-child(odd):not(.trainer__card:first-of-type):not(.trainer__card:last-of-type) {
@@ -892,7 +912,7 @@ iframe {
     gap: 3.5rem;
   }
 
-  .program__img {
+  .program__img::before {
     width: 85px;
     height: 85px;
   }
