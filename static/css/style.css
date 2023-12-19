@@ -182,7 +182,7 @@ nav {
 .nav__logo {
   width: 5.25rem;
   height: 80%;
-  background-image: url("./static/img/logo.png");
+  background-image: url("../img/logo.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -340,7 +340,7 @@ nav {
 
 /*==================== SERVICE ====================*/
 #services {
-  background-image: url("./static/img/background.jpg");
+  background-image: url("../img/background.jpg");
   background-repeat: repeat;
 }
 
@@ -389,31 +389,31 @@ h4.section__title {
 }
 
 #global-ems .service__img {
-  background-image: url('./static/img/ems.png');
+  background-image: url('../img/ems.png');
 }
 
 #bioimpedance-analysis .service__img {
-  background-image: url('./static/img/bioimp.png');
+  background-image: url('../img/bioimp.png');
 }
 
 #photoplethysmogram .service__img {
-  background-image: url('./static/img/ppg.png');
+  background-image: url('../img/ppg.png');
 }
 
 #personal-training .service__img {
-  background-image: url('./static/img/personal.png');
+  background-image: url('../img/personal.png');
 }
 
 #criotherapy .service__img {
-  background-image: url('./static/img/crioter.png');
+  background-image: url('../img/crioter.png');
 }
 
 #sensory-floating .service__img {
-  background-image: url('./static/img/floating.png');
+  background-image: url('../img/floating.png');
 }
 
 #motion-capture .service__img {
-  background-image: url('./static/img/motioncap.png');
+  background-image: url('../img/motioncap.png');
 }
 
 .service__description,
@@ -474,7 +474,7 @@ h4.section__title {
 }
 /*==================== SCHEDULE ====================*/
 #gym-schedule {
-  background-image: url("./static/img/background.jpg");
+  background-image: url("../img/background.jpg");
   background-repeat: repeat;
 }
 
@@ -502,7 +502,7 @@ h4.section__title {
 
 /*==================== MAPS ====================*/
 #location {
-  background-image: url("./static/img/background.jpg");
+  background-image: url("../img/background.jpg");
   background-repeat: repeat;
 }
 
