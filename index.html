@@ -9,8 +9,8 @@
   <link rel="shortcut icon" href="./static/img/icon.png">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
   <link rel="stylesheet" href="./static/css/style.css">
-  <script defer src="./static/js/base.js"></script>
-  <script defer src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+  <script src="./static/js/base.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js" defer></script>
   <title>Lime Fitness House | Homepage</title>
 </head>
 <body>
@@ -150,16 +150,12 @@
         <h2 class="section__title"><span class="secondary">PRENOTA</span> <span>UNA CONSULENZA</span></h2>
         <h3 class="contact__subtitle">Riceverai il 5% di sconto sul tuo abbonamento</h3>
       </header>
-      <form class="contact__form" action="form.php">
-
-        <label for="contact__form-email">Email</label>
-        <input type="email" id="contact__form-email" name="email" placeholder="La tua email">
-    
+      <form class="contact__form">
         <label for="contact__form-fname">Nome</label>
         <input type="text" id="contact__form-fname" name="firstname" placeholder="Il tuo nome">
     
         <label for="contact__form-subject">Messaggio</label>
-        <textarea rows="5" id="contact__form-subject" name="contact__form-subject" placeholder="Messaggio ..."></textarea>
+        <textarea rows="5" id="contact__form-subject" name="message" placeholder="Messaggio ..."></textarea>
     
         <input type="submit" id="contact__form-submit" value="Invia">
     
